@@ -7,9 +7,11 @@ import com.atguigu.educenter.utils.ConstantWxUtils;
 import com.atguigu.educenter.utils.HttpClientUtils;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.google.gson.Gson;
+import org.bouncycastle.util.encoders.Base64Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import sun.misc.BASE64Encoder;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -81,6 +83,7 @@ public class WxApiController {
                 member.setAvatar(headimgurl);
                 memberService.save(member);
             }
+
 
             //使用jwt根据member对象生成token字符串
             String jwtToken = JwtUtils.getJwtToken(member.getId(), member.getNickname());
