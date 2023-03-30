@@ -4,8 +4,8 @@
   const service = axios.create({
     // axios中请求配置有baseURL选项，表示请求URL公共部分
     baseURL: '/',
-    // 如果等到超时 时间，还是接收不到服务端 返回的结果，前端响应为 等待超时
-    timeout: 1000000
+    // 超时
+    timeout: 10000
   })
   // request拦截器
   service.interceptors.request.use(config => {
