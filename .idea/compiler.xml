@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="reggie_take_out" />
+        <module name="sangeng-framework" />
+        <module name="sangeng-admin" />
+        <module name="sangeng-blog" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="reggie_take_out" target="1.8" />
+      <module name="sangeng-admin" target="1.8" />
+      <module name="sangeng-blog" target="1.8" />
+      <module name="sangeng-framework" target="1.8" />
+      <module name="SGBlog" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="reggie_take_out" options="-parameters" />
-    </option>
   </component>
 </project>
